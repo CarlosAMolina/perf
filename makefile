@@ -30,4 +30,12 @@ syscall-tracing-events:
 	# -e: filter event. Run `perf list` to see available events to filter.
 	sudo perf trace -p $(PROCESS_ID)
 
+cpu-stats:
+	# Book section: 4.3.9
+	# Output meaning:
+	# - First column: raw counts.
+	# - Values after `#`: some statistics:
+	#   - insn per cycle (instructions per cycle): this shows how efficiently the CPUs are execution instructions. The higher, the better.
+	perf stat sleep 5
+
 
