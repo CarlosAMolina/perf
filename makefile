@@ -1,5 +1,9 @@
 PROCESS_ID=$(shell pgrep -o firefox)
 
+config-system:
+	# https://askubuntu.com/questions/167819/im-getting-fsync-failed-error-why
+	echo -1 | sudo dd of=/proc/sys/kernel/perf_event_paranoid
+
 cpu-profiling:
 	# Book section: 5.5.1.
 	# - F 49: 49 Hertz (samples / second).
