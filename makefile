@@ -36,6 +36,8 @@ cpu-stats:
 	# - First column: raw counts.
 	# - Values after `#`: some statistics:
 	#   - insn per cycle (instructions per cycle): this shows how efficiently the CPUs are execution instructions. The higher, the better.
+	# Notes:
+	# - With two cpu working at 100% (`perf stat dd if=/dev/zero of=/dev/null | dd if=/dev/zero of=/dev/null`, https://stackoverflow.com/questions/2925606/how-to-create-a-cpu-spike-with-a-bash-command) the `CPUs utilzed` value is 0.996, lower than 1.
 	perf stat sleep 5
 
 
