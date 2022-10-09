@@ -27,6 +27,13 @@ Edit it with this command:
 make config-system
 ```
 
+### Initial values
+
+```bash
+sudo echo 1 > /proc/sys/kernel/nmi_watchdog
+sudo echo 2 > /proc/sys/kernel/perf_event_paranoid
+```
+
 ## Resources
 
 - Book: <https://www.brendangregg.com/systems-performance-2nd-edition-book.html>
