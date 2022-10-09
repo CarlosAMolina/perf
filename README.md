@@ -31,3 +31,4 @@ make config-system
 
 - Book: <https://www.brendangregg.com/systems-performance-2nd-edition-book.html>
 
+- Command examples: <https://www.brendangregg.com/perf.html>
